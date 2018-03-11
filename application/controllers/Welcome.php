@@ -22,31 +22,4 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('welcome_message');
 	}
-	public function test()
-	{
-		$this->load->library('redis');
-		$redis=$this->redis->get_redis();
-		$this->load->helper('redis_helper');
-		// $arr =  getControlList('29');
-		// echo '<pre>';
-		// print_r($arr);
-
-		// $arr =  getAssessment('2','9');
-		echo '<pre>';
-		// print_r($arr);
-
-		delFullControlList();
-
-		// $list = $redis->keys("*");
-
-		// print_r($list);
-
-		// // echo $redis->get('assetcontrollist');
-		// $redis->del('assetAssesment29');
-		// echo 'done';
-		
-	}
-
-	
 }
-
