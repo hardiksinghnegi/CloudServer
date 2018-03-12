@@ -1,0 +1,247 @@
+#special
+  {
+
+    margin-right:20px;
+  }
+  .table-responsive table tbody tr td, table thead tr th{
+   text-align: center !important;
+   vertical-align: middle !important;
+ }
+ .table-responsive table tbody tr td.white-text{
+   color: #fff !important;
+ }
+ .custom-caret:before{
+   font-family: 'FontAwesome';
+   content: "\f0d8";
+ }
+ .headerSortUp > .custom-caret:before{
+   font-family: 'FontAwesome';
+   content: "\f0d8";
+ }
+ .headerSortDown > .custom-caret:before{
+   font-family: 'FontAwesome';
+   content: "\f0d7"
+ }
+ #assetGraph{
+   width: 100%;
+   height: 450px;
+ }
+ .generateReport{
+   color: #fff;
+   padding: 5px 8px;
+   border: none;
+   font-weight: 400;
+   position: absolute !important;
+   top: -3px;
+   right: 22px;
+ }
+ #endDatelabel{
+   margin-top: 10px;
+ }
+ .dropdown-menu{
+   visibility: visible;
+ }
+ #toolContainer{
+   margin-bottom: 5px;
+   margin-top: 10px;
+   padding-right: 0px;
+ }
+ .panel.panel-white{
+   margin-bottom: 200px;
+ }
+   
+.buttons-html5
+{
+  margin: 0px !important;
+}
+
+
+ .show-cell {
+display: table-cell !important;
+}
+td{
+-moz-background-clip: padding;     /* Firefox 3.6 */
+-webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */  
+}
+select{
+   background-image: none !important;
+   -webkit-appearance: menulist;
+ }
+ label{
+   color: #5b5b60;
+ }
+ input[type="search"]{
+  height: 25px;
+  margin-right: 40px;
+}
+.dataTables_length{
+  margin-right: 15px;
+  position: relative;
+  top: 5px;
+}
+.btn:hover{
+ background-color: #dddddd; 
+}
+button.dt-button, div.dt-button, a.dt-button{
+  width: 111px;
+  text-align: center;
+  border-radius: 0;
+}
+button.dt-button:hover, div.dt-button:hover, a.dt-button:hover{
+   
+  background: #fff !important;
+    
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button{
+  background: #EAEAE7;
+  color: #000 !important;
+  border-radius: 0%;
+  border: 1px solid #EAEAE7;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover{
+ background: #CCCCCC;
+ color: #000 !important;
+ border-radius: 0%;
+ border: 1px solid #CCCCCC;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover{
+  background: #fff;
+  border: 1px solid #CCCCCC;
+  color: #000 !important;
+}
+/*.dropbtn {
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    display: none;
+}*/
+ 
+
+.dropdown-content {
+    display: none;
+    position: absolute!important;
+    right: 0px;
+    top:28px;
+     
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    
+    padding: 12px 10px;
+    
+    display: block;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+select.input-sm {
+    height: 19px;
+    padding: 0;
+  }
+
+.cust-icon-cont{
+  /*margin-bottom: 6px;*/
+  background-color: #537FE3;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  color: #777777;
+  margin-left: 5px;
+  box-shadow: 0px 0px 3px #ccc;
+}
+
+.dt-buttons.btn-group
+{
+  width: 100% !important;
+    display: inline-grid !important;
+}
+
+.dropdown
+{
+  z-index: 2;
+    top: 54px;
+    right: 14px;
+}
+button.dt-button, div.dt-button, a.dt-button{
+
+  width: 111px;
+  text-align: center;
+  border-radius: 0;
+}
+button.dt-button:hover, div.dt-button:hover, a.dt-button:hover{
+
+  background: #fff !important;
+  
+}
+.dropbtn {
+    padding: 2px 10px;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    background-color: transparent;
+    top: 13px;
+    right: 14px;
+    color: #4d4d4d !important;
+}
+
+input[type="search"]{
+  height: 25px;
+  margin-right: 38px;
+}
+.dropdownn-content {
+  display: none;
+  position: absolute!important;
+  right:11px;
+  top:42px;
+  z-index: 1;
+}
+
+.dropdownn-content a {
+  padding: 12px 10px;
+  display: block;
+}
+
+.dropdownn:hover .dropdownn-content {
+  display: block;
+}
+
+select.input-sm {
+  height: 19px;
+  padding: 0;
+}
+
+.cust-icon-cont{
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  color: #777777;
+  margin-left: 5px;
+  box-shadow: 0px 0px 3px #ccc;
+}
+
+.dt-buttons.btn-group
+{
+  width: 100% !important;
+  display: inline-grid !important;
+}
+.dataTables_wrapper .dataTables_processing{
+  display: none !important;
+}
+table.dataTable.no-footer{
+  border-bottom: 0px;
+}
+
+.dataTables_wrapper{
+  overflow-x: hidden;
+}

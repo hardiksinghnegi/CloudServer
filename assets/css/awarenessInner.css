@@ -1,0 +1,154 @@
+.grid {
+	padding: 20px 20px 100px 20px;
+	max-width: 1300px;
+	margin: 0 auto;
+	list-style: none;
+	text-align: center;
+}
+
+.grid li {
+	display: inline-block;
+	width: 280px;
+	margin: 0;
+	padding: 10px;
+	text-align: left;
+	position: relative;
+}
+
+.grid figure {
+	margin: 0;
+	position: relative;
+}
+
+.grid figure i {
+	max-width: 100%;
+	display: block;
+	position: relative;
+}
+
+.grid figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 20px;
+	background: #2c3f52;
+	color: #ff4d4b;
+}
+
+.grid figcaption h3 {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+    font-size: 15px;
+    font-family: 'Lato';
+    font-weight: 400;
+}
+
+.grid figcaption span {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.grid figcaption a {
+	text-align: center;
+	padding: 5px 10px;
+	border-radius: 0;
+	display: inline-block;
+	background: #ff4d4b;
+	color: #fff;
+	font-size: 12px;
+}
+.cs-style-3 figure {
+	overflow: hidden;
+}
+
+.cs-style-3 figure i {
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+	transition: transform 0.4s;
+}
+
+.no-touch .cs-style-3 figure:hover i,
+.cs-style-3 figure.cs-hover i {
+	-webkit-transform: translateY(-50px);
+	-moz-transform: translateY(-50px);
+	-ms-transform: translateY(-50px);
+	transform: translateY(-50px);
+}
+
+.no-touch .cs-style-3 figure:hover i:before,
+.cs-style-3 figure.cs-hover i:before {
+	font-size: 100px;
+}
+.no-touch .cs-style-3 figure:hover i:before span,
+.cs-style-3 figure.cs-hover i:before span {
+	font-size: 100px;
+}
+
+.cs-style-3 figcaption {
+	height: 90px;
+	width: 100%;
+	top: auto;
+	bottom: 0;
+	opacity: 0;
+	-webkit-transform: translateY(90%);
+	-moz-transform: translateY(90%);
+	-ms-transform: translateY(90%);
+	transform: translateY(90%);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+.no-touch .cs-style-3 figure:hover figcaption,
+.cs-style-3 figure.cs-hover figcaption {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	transform: translateY(0px);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
+}
+
+.cs-style-3 figcaption a {
+	position: absolute;
+	bottom: 10px;
+	right: 20px;
+}
+.ic-bg{
+    width: 100%;
+    height: 260px;
+    background-color: #e4e4e4;
+    padding: 50px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    box-shadow: 0px 0px 3px #ccc;
+}
+.ic-bg:before{
+    font-size: 100px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    text-shadow: 0px 0px 0 #cccccc,1px 1px 0 #cccccc,2px 2px 0 #cccccc,3px 3px 0 #cccccc,4px 4px 0 #cccccc,5px 5px 0 #cccccc,6px 6px 0 #cccccc,7px 7px 0 #cccccc,8px 8px 0 #cccccc,9px 9px 0 #cccccc,10px 10px 0 #cccccc,11px 11px 0 #cccccc,12px 12px 0 #cccccc,13px 13px 0 #cccccc,14px 14px 0 #cccccc,15px 15px 0 #cccccc,16px 16px 0 #cccccc,17px 17px 0 #cccccc,18px 18px 0 #cccccc,19px 19px 0 #cccccc,20px 20px 0 #cccccc,21px 21px 0 #cccccc,22px 22px 0 #cccccc,23px 23px 0 #cccccc,24px 24px 0 #cccccc,25px 25px 0 #cccccc,26px 26px 0 #cccccc,27px 27px 0 #cccccc,28px 28px 0 #cccccc,29px 29px 0 #cccccc,30px 30px 0 #cccccc,31px 31px 0 #cccccc,32px 32px 0 #cccccc,33px 33px 0 #cccccc,34px 34px 0 #cccccc,35px 35px 0 #cccccc,36px 36px 0 #cccccc,37px 37px 0 #cccccc,38px 38px 0 #cccccc,39px 39px 0 #cccccc,40px 40px 0 #cccccc,41px 41px 0 #cccccc,42px 42px 0 #cccccc,43px 43px 0 #cccccc,44px 44px 0 #cccccc,45px 45px 0 #cccccc,46px 46px 0 #cccccc,47px 47px 0 #cccccc,48px 48px 0 #cccccc,49px 49px 0 #cccccc,50px 50px 0 #cccccc,51px 51px 0 #cccccc,52px 52px 0 #cccccc,53px 53px 0 #cccccc,54px 54px 0 #cccccc,55px 55px 0 #cccccc,56px 56px 0 #cccccc,57px 57px 0 #cccccc,58px 58px 0 #cccccc,59px 59px 0 #cccccc,60px 60px 0 #cccccc,61px 61px 0 #cccccc,62px 62px 0 #cccccc,63px 63px 0 #cccccc,64px 64px 0 #cccccc,65px 65px 0 #cccccc,66px 66px 0 #cccccc,67px 67px 0 #cccccc,68px 68px 0 #cccccc,69px 69px 0 #cccccc,70px 70px 0 #cccccc,71px 71px 0 #cccccc,72px 72px 0 #cccccc,73px 73px 0 #cccccc,74px 74px 0 #cccccc,75px 75px 0 #cccccc,76px 76px 0 #cccccc,77px 77px 0 #cccccc,78px 78px 0 #cccccc,79px 79px 0 #cccccc,80px 80px 0 #cccccc,81px 81px 0 #cccccc,82px 82px 0 #cccccc,83px 83px 0 #cccccc,84px 84px 0 #cccccc,85px 85px 0 #cccccc,86px 86px 0 #cccccc,87px 87px 0 #cccccc,88px 88px 0 #cccccc,89px 89px 0 #cccccc,90px 90px 0 #cccccc,91px 91px 0 #cccccc,92px 92px 0 #cccccc,93px 93px 0 #cccccc,94px 94px 0 #cccccc,95px 95px 0 #cccccc,96px 96px 0 #cccccc,97px 97px 0 #cccccc,98px 98px 0 #cccccc,99px 99px 0 #cccccc,100px 100px 0 #cccccc,101px 101px 0 #cccccc,102px 102px 0 #cccccc,103px 103px 0 #cccccc,104px 104px 0 #cccccc,105px 105px 0 #cccccc,106px 106px 0 #cccccc,107px 107px 0 #cccccc,108px 108px 0 #cccccc,109px 109px 0 #cccccc,110px 110px 0 #cccccc,111px 111px 0 #cccccc,112px 112px 0 #cccccc,113px 113px 0 #cccccc,114px 114px 0 #cccccc,115px 115px 0 #cccccc,116px 116px 0 #cccccc,117px 117px 0 #cccccc,118px 118px 0 #cccccc,119px 119px 0 #cccccc,120px 120px 0 #cccccc,121px 121px 0 #cccccc,122px 122px 0 #cccccc,123px 123px 0 #cccccc,124px 124px 0 #cccccc,125px 125px 0 #cccccc,126px 126px 0 #cccccc,127px 127px 0 #cccccc,128px 128px 0 #cccccc,129px 129px 0 #cccccc,130px 130px 0 #cccccc,131px 131px 0 #cccccc,132px 132px 0 #cccccc,133px 133px 0 #cccccc,134px 134px 0 #cccccc,135px 135px 0 #cccccc,136px 136px 0 #cccccc,137px 137px 0 #cccccc,138px 138px 0 #cccccc,139px 139px 0 #cccccc,140px 140px 0 #cccccc,141px 141px 0 #cccccc,142px 142px 0 #cccccc,143px 143px 0 #cccccc,144px 144px 0 #cccccc,145px 145px 0 #cccccc,146px 146px 0 #cccccc,147px 147px 0 #cccccc,148px 148px 0 #cccccc,149px 149px 0 #cccccc,150px 150px 0 #cccccc,151px 151px 0 #cccccc,152px 152px 0 #cccccc,153px 153px 0 #cccccc,154px 154px 0 #cccccc,155px 155px 0 #cccccc,156px 156px 0 #cccccc,157px 157px 0 #cccccc,158px 158px 0 #cccccc,159px 159px 0 #cccccc,160px 160px 0 #cccccc,161px 161px 0 #cccccc,162px 162px 0 #cccccc,163px 163px 0 #cccccc,164px 164px 0 #cccccc,165px 165px 0 #cccccc,166px 166px 0 #cccccc,167px 167px 0 #cccccc,168px 168px 0 #cccccc,169px 169px 0 #cccccc,170px 170px 0 #cccccc,171px 171px 0 #cccccc,172px 172px 0 #cccccc,173px 173px 0 #cccccc,174px 174px 0 #cccccc,175px 175px 0 #cccccc,176px 176px 0 #cccccc,177px 177px 0 #cccccc,178px 178px 0 #cccccc,179px 179px 0 #cccccc,180px 180px 0 #cccccc,181px 181px 0 #cccccc,182px 182px 0 #cccccc,183px 183px 0 #cccccc,184px 184px 0 #cccccc,185px 185px 0 #cccccc,186px 186px 0 #cccccc,187px 187px 0 #cccccc,188px 188px 0 #cccccc,189px 189px 0 #cccccc,190px 190px 0 #cccccc,191px 191px 0 #cccccc,192px 192px 0 #cccccc,193px 193px 0 #cccccc,194px 194px 0 #cccccc,195px 195px 0 #cccccc,196px 196px 0 #cccccc,197px 197px 0 #cccccc,198px 198px 0 #cccccc,200px 200px 0 transparent
+}
+
+.ic-bg:before span{
+    font-size: 100px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    text-shadow: 0px 0px 0 #cccccc,1px 1px 0 #cccccc,2px 2px 0 #cccccc,3px 3px 0 #cccccc,4px 4px 0 #cccccc,5px 5px 0 #cccccc,6px 6px 0 #cccccc,7px 7px 0 #cccccc,8px 8px 0 #cccccc,9px 9px 0 #cccccc,10px 10px 0 #cccccc,11px 11px 0 #cccccc,12px 12px 0 #cccccc,13px 13px 0 #cccccc,14px 14px 0 #cccccc,15px 15px 0 #cccccc,16px 16px 0 #cccccc,17px 17px 0 #cccccc,18px 18px 0 #cccccc,19px 19px 0 #cccccc,20px 20px 0 #cccccc,21px 21px 0 #cccccc,22px 22px 0 #cccccc,23px 23px 0 #cccccc,24px 24px 0 #cccccc,25px 25px 0 #cccccc,26px 26px 0 #cccccc,27px 27px 0 #cccccc,28px 28px 0 #cccccc,29px 29px 0 #cccccc,30px 30px 0 #cccccc,31px 31px 0 #cccccc,32px 32px 0 #cccccc,33px 33px 0 #cccccc,34px 34px 0 #cccccc,35px 35px 0 #cccccc,36px 36px 0 #cccccc,37px 37px 0 #cccccc,38px 38px 0 #cccccc,39px 39px 0 #cccccc,40px 40px 0 #cccccc,41px 41px 0 #cccccc,42px 42px 0 #cccccc,43px 43px 0 #cccccc,44px 44px 0 #cccccc,45px 45px 0 #cccccc,46px 46px 0 #cccccc,47px 47px 0 #cccccc,48px 48px 0 #cccccc,49px 49px 0 #cccccc,50px 50px 0 #cccccc,51px 51px 0 #cccccc,52px 52px 0 #cccccc,53px 53px 0 #cccccc,54px 54px 0 #cccccc,55px 55px 0 #cccccc,56px 56px 0 #cccccc,57px 57px 0 #cccccc,58px 58px 0 #cccccc,59px 59px 0 #cccccc,60px 60px 0 #cccccc,61px 61px 0 #cccccc,62px 62px 0 #cccccc,63px 63px 0 #cccccc,64px 64px 0 #cccccc,65px 65px 0 #cccccc,66px 66px 0 #cccccc,67px 67px 0 #cccccc,68px 68px 0 #cccccc,69px 69px 0 #cccccc,70px 70px 0 #cccccc,71px 71px 0 #cccccc,72px 72px 0 #cccccc,73px 73px 0 #cccccc,74px 74px 0 #cccccc,75px 75px 0 #cccccc,76px 76px 0 #cccccc,77px 77px 0 #cccccc,78px 78px 0 #cccccc,79px 79px 0 #cccccc,80px 80px 0 #cccccc,81px 81px 0 #cccccc,82px 82px 0 #cccccc,83px 83px 0 #cccccc,84px 84px 0 #cccccc,85px 85px 0 #cccccc,86px 86px 0 #cccccc,87px 87px 0 #cccccc,88px 88px 0 #cccccc,89px 89px 0 #cccccc,90px 90px 0 #cccccc,91px 91px 0 #cccccc,92px 92px 0 #cccccc,93px 93px 0 #cccccc,94px 94px 0 #cccccc,95px 95px 0 #cccccc,96px 96px 0 #cccccc,97px 97px 0 #cccccc,98px 98px 0 #cccccc,99px 99px 0 #cccccc,100px 100px 0 #cccccc,101px 101px 0 #cccccc,102px 102px 0 #cccccc,103px 103px 0 #cccccc,104px 104px 0 #cccccc,105px 105px 0 #cccccc,106px 106px 0 #cccccc,107px 107px 0 #cccccc,108px 108px 0 #cccccc,109px 109px 0 #cccccc,110px 110px 0 #cccccc,111px 111px 0 #cccccc,112px 112px 0 #cccccc,113px 113px 0 #cccccc,114px 114px 0 #cccccc,115px 115px 0 #cccccc,116px 116px 0 #cccccc,117px 117px 0 #cccccc,118px 118px 0 #cccccc,119px 119px 0 #cccccc,120px 120px 0 #cccccc,121px 121px 0 #cccccc,122px 122px 0 #cccccc,123px 123px 0 #cccccc,124px 124px 0 #cccccc,125px 125px 0 #cccccc,126px 126px 0 #cccccc,127px 127px 0 #cccccc,128px 128px 0 #cccccc,129px 129px 0 #cccccc,130px 130px 0 #cccccc,131px 131px 0 #cccccc,132px 132px 0 #cccccc,133px 133px 0 #cccccc,134px 134px 0 #cccccc,135px 135px 0 #cccccc,136px 136px 0 #cccccc,137px 137px 0 #cccccc,138px 138px 0 #cccccc,139px 139px 0 #cccccc,140px 140px 0 #cccccc,141px 141px 0 #cccccc,142px 142px 0 #cccccc,143px 143px 0 #cccccc,144px 144px 0 #cccccc,145px 145px 0 #cccccc,146px 146px 0 #cccccc,147px 147px 0 #cccccc,148px 148px 0 #cccccc,149px 149px 0 #cccccc,150px 150px 0 #cccccc,151px 151px 0 #cccccc,152px 152px 0 #cccccc,153px 153px 0 #cccccc,154px 154px 0 #cccccc,155px 155px 0 #cccccc,156px 156px 0 #cccccc,157px 157px 0 #cccccc,158px 158px 0 #cccccc,159px 159px 0 #cccccc,160px 160px 0 #cccccc,161px 161px 0 #cccccc,162px 162px 0 #cccccc,163px 163px 0 #cccccc,164px 164px 0 #cccccc,165px 165px 0 #cccccc,166px 166px 0 #cccccc,167px 167px 0 #cccccc,168px 168px 0 #cccccc,169px 169px 0 #cccccc,170px 170px 0 #cccccc,171px 171px 0 #cccccc,172px 172px 0 #cccccc,173px 173px 0 #cccccc,174px 174px 0 #cccccc,175px 175px 0 #cccccc,176px 176px 0 #cccccc,177px 177px 0 #cccccc,178px 178px 0 #cccccc,179px 179px 0 #cccccc,180px 180px 0 #cccccc,181px 181px 0 #cccccc,182px 182px 0 #cccccc,183px 183px 0 #cccccc,184px 184px 0 #cccccc,185px 185px 0 #cccccc,186px 186px 0 #cccccc,187px 187px 0 #cccccc,188px 188px 0 #cccccc,189px 189px 0 #cccccc,190px 190px 0 #cccccc,191px 191px 0 #cccccc,192px 192px 0 #cccccc,193px 193px 0 #cccccc,194px 194px 0 #cccccc,195px 195px 0 #cccccc,196px 196px 0 #cccccc,197px 197px 0 #cccccc,198px 198px 0 #cccccc,200px 200px 0 transparent
+}

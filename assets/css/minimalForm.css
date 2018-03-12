@@ -1,0 +1,368 @@
+
+label{
+	margin-right: 20px;
+}
+
+
+
+
+.main-head-slider{
+	padding: 20px;
+	text-align: center;
+	background-color: #f1f1f1;
+	color: #4d4d4d;
+	font-weight: 700;
+	font-size: 32px;
+}
+.smileyCont{
+  padding: 50px;
+}
+.slider-next{
+	padding: 15px 25px;
+	background-color: #537FE3;
+	color: #fff;
+	font-family: 'Lato';
+	font-size: 12px;
+	font-weight: 400;
+	cursor: pointer;
+	margin-right: 10px;
+}
+.slider-previous{
+	padding: 15px 25px;
+	background-color: #40c1f3;
+	color: #fff;
+	font-family: 'Lato';
+	font-size: 12px;
+	font-weight: 400;
+	cursor: pointer;
+	margin-left: 10px;
+}
+.slider-submit{
+	padding: 15px 25px;
+	background-color: rgba(90,140,90,1);
+	color: #fff;
+	font-family: 'Lato';
+	font-size: 12px;
+	font-weight: 400;
+	cursor: pointer;
+	margin-left: 10px;
+}
+.quest{
+	font-size: 18px;
+	margin-bottom: 20px;
+	font-weight: 100;
+}
+input[type=radio].with-font,
+input[type=checkbox].with-font {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+    
+input[type=radio].with-font ~ label.smile1:before,
+input[type=checkbox].with-font ~ label.smile1:before {
+    font-family: 'icomoon' !important;
+    display: inline-block;
+    content: "\e9e5";
+    letter-spacing: 5px;
+    font-size: 5em;
+    color: #ccc;
+    width: 1.4em;
+    -webkit-transition: font-size 0.3s ease-in-out;
+    -moz-transition: font-size 0.3s ease-in-out;
+    transition: font-size 0.3s ease-in-out;
+}
+/*input[type=radio].with-font ~ label{
+	font-size: 1.5em;
+}*/
+input[type=radio].with-font ~ label.smile2:before,
+input[type=checkbox].with-font ~ label.smile2:before {
+    font-family: 'icomoon' !important;
+    display: inline-block;
+    content: "\e9fb";
+    letter-spacing: 5px;
+    font-size: 5em;
+    color: #ccc;
+    width: 1.4em;
+    -webkit-transition: font-size 0.3s ease-in-out;
+    -moz-transition: font-size 0.3s ease-in-out;
+    transition: font-size 0.3s ease-in-out;
+}
+
+input[type=radio].with-font ~ label.smile3:before,
+input[type=checkbox].with-font ~ label.smile3:before {
+    font-family: 'icomoon' !important;
+    display: inline-block;
+    content: "\e9e1";
+    letter-spacing: 5px;
+    font-size: 5em;
+    color: #ccc;
+    width: 1.4em;
+    -webkit-transition: font-size 0.3s ease-in-out;
+    -moz-transition: font-size 0.3s ease-in-out;
+    transition: font-size 0.3s ease-in-out;
+}
+
+input[type=radio].with-font ~ label.smile4:before,
+input[type=checkbox].with-font ~ label.smile4:before {
+    font-family: 'icomoon' !important;
+    display: inline-block;
+    content: "\e9df";
+    letter-spacing: 5px;
+    font-size: 5em;
+    color: #ccc;
+    width: 1.4em;
+    -webkit-transition: font-size 0.3s ease-in-out;
+    -moz-transition: font-size 0.3s ease-in-out;
+    transition: font-size 0.3s ease-in-out;
+}
+
+input[type=radio].with-font ~ label.smile5:before,
+input[type=checkbox].with-font ~ label.smile5:before {
+    font-family: 'icomoon' !important;
+    display: inline-block;
+    content: "\e9fb";
+    letter-spacing: 5px;
+    font-size: 5em;
+    color: #ccc;
+    width: 1.4em;
+    -webkit-transition: font-size 0.3s ease-in-out;
+    -moz-transition: font-size 0.3s ease-in-out;
+    transition: font-size 0.3s ease-in-out;
+}
+
+input[type=radio].with-font:checked ~ label:before,
+input[type=checkbox].with-font:checked ~ label:before  {
+    font-size: 5em;
+    color: darkgreen;
+    letter-spacing: 5px;
+}
+input[type=checkbox].with-font ~ label:before {        
+    content: "\f096";
+}
+input[type=checkbox].with-font:checked ~ label:before {
+    content: "\f046";        
+    color: darkgreen;
+}
+input[type=radio].with-font:focus ~ label:before,
+input[type=checkbox].with-font:focus ~ label:before,
+input[type=radio].with-font:focus ~ label,
+input[type=checkbox].with-font:focus ~ label
+{                
+    color: green;
+}
+
+
+
+
+
+
+
+
+/* Ripple Effect with Radio Button */
+@-webkit-keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.80;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+@-moz-keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.80;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+@keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.80;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 13.33333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 40px !important;
+  width: 40px !important;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.option-input.critical{
+	background: #ff4d4b;
+}
+.option-input.high{
+	background: #ff9725;
+}
+.option-input.medium{
+	background: rgba(239,189,0,1);
+}
+.option-input.low{
+	background: rgba(139,202,57,1);
+}
+.option-input.negligible{
+	background: rgba(90,140,90,1);
+}
+
+
+.option-input.critical{
+	background: #ff4d4b;
+}
+.option-input.high{
+	background: #ff9725;
+}
+.option-input.medium{
+	background: rgba(239,189,0,1);
+}
+.option-input.low{
+	background: rgba(139,202,57,1);
+}
+.option-input.negligible{
+	background: rgba(90,140,90,1);
+}
+
+
+.option-input.critical:checked{
+	background: #ff4d4b;
+}
+.option-input.high:checked{
+	background: #ff9725;
+}
+.option-input.medium:checked{
+	background: rgba(239,189,0,1);
+}
+.option-input.low:checked{
+	background: rgba(139,202,57,1);
+}
+.option-input.negligible:checked{
+	background: rgba(90,140,90,1);
+}
+
+.option-input:hover {
+ opacity: 0.5
+}
+.option-input[type=radio]:focus{
+	outline: none !important;
+}
+/*.option-input:checked {
+  background: #40e0d0;
+}*/
+.option-input:checked::before {
+  height: 40px;
+  width: 40px;
+  font-family: 'FontAwesome';
+  position: absolute;
+  content: '\f111';
+  display: inline-block;
+  font-size: 26.66667px;
+  text-align: center;
+  line-height: 40px;
+}
+.option-input.critical:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #ff4d4b;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+
+.option-input.high:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #ff9725;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+
+.option-input.medium:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: rgba(239,189,0,1);
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+
+.option-input.low:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: rgba(139,202,57,1);
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+
+.option-input.negligible:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: rgba(90,140,90,1);
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+.option-input.radio {
+  border-radius: 50%;
+}
+.option-input.radio::after {
+  border-radius: 50%;
+}

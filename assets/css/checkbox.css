@@ -1,0 +1,312 @@
+input[type=checkbox].css-checkbox {
+                            position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+                        }
+
+                        input[type=checkbox].css-checkbox + label.css-label {
+                            padding-left:29px;
+                            height:24px; 
+                            display:inline-block;
+                            line-height:24px;
+                            background-repeat:no-repeat;
+                            background-position: 0 0;
+                            font-size:24px;
+                            vertical-align:middle;
+                            cursor:pointer;
+
+                        }
+
+                        input[type=checkbox].css-checkbox:checked + label.css-label {
+                            background-position: 0 -24px;
+                        }
+                        label.css-label {
+                background-image:url(../../assets/img/checkbox.png);
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+.clip-check,
+.clip-radio {
+    margin-bottom: 10px;
+    margin-top: 10px
+}
+.clip-check input[type=checkbox],
+.clip-radio input[type=radio] {
+    opacity: 0
+}
+
+input[type=checkbox],
+input[type=radio] {
+    box-sizing: border-box;
+    cursor: pointer;
+    line-height: normal
+}
+.clip-check {
+    padding-left: 0
+}
+.clip-check label {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 15px;
+    padding-left: 40px!important;
+    position: relative;
+    line-height: 23px;
+    transition: border .2s linear 0s, color .2s linear 0s;
+    white-space: nowrap;
+    padding: 6px;
+    color: #aaa;
+    font-family:'Lato';
+    font-weight: 300;
+}
+.clip-check label:after, .clip-check label.quest-checkbox-label:after,
+.clip-check label:before, .clip-check label.quest-checkbox-label:before {
+    position: absolute;
+    transition: border .2s linear 0s, color .2s linear 0s;
+    display: inline-block
+}
+.clip-check label:before {
+    background-color: #fff;
+    border: 1px solid #c8c7cc;
+    content: "";
+    height: 30px;
+    left: 0;
+    margin-right: 10px;
+    width: 30px;
+    border-radius: 0;
+    top: 1px
+}
+.clip-check label:after {
+      font-size: 14px;
+    height: 26px;
+    left: 9px;
+    top: 5px;
+    width: 19px;
+}
+
+.clip-check label.quest-checkbox-label:before {
+    
+    height: 20px;
+   
+    width: 20px;
+   
+}
+.clip-check label.quest-checkbox-label:after {
+    left: 6px;
+    top: 0px;
+    font-size: 10px;
+}
+.clip-check input[type=checkbox]:checked+label:before {
+    border-width: 15px
+}
+.clip-check input[type=checkbox]:checked+label.quest-checkbox-label:before {
+    border-width: 10px
+}
+.clip-check input[type=checkbox]:checked+label:after {
+    color: #fff;
+    
+}
+.clip-check input[type=checkbox]:focus+label::before {
+    background-color: #e6e6e6
+}
+.clip-check input[type=checkbox][disabled]+label {
+    opacity: .65
+}
+.clip-check input[type=checkbox][disabled]+label:before {
+    background-color: #F8F8F8
+}
+.clip-check.check-sm label {
+    margin-right: 15px;
+    padding-left: 24px!important;
+    line-height: 22px
+}
+.clip-check.check-sm label:before {
+    height: 14px;
+    width: 14px;
+    top: 4px
+}
+.clip-check.check-sm label:after {
+    font-size: 8px;
+    height: 13px;
+    left: 3px;
+    width: 13px
+}
+.clip-check.check-sm input[type=checkbox]:checked+label:before {
+    border-width: 7px
+}
+.clip-check.check-md label {
+    margin-right: 15px;
+    padding-left: 35px!important;
+    line-height: 28px
+}
+.clip-check.check-md label:before {
+    height: 25px;
+    width: 25px
+}
+.clip-check.check-md label:after {
+    font-size: 14px;
+    height: 24px;
+    left: 5px;
+    width: 24px
+}
+.clip-check.check-md input[type=checkbox]:checked+label:before {
+    border-width: 12px
+}
+.clip-check.check-lg label {
+    margin-right: 15px;
+    padding-left: 40px!important;
+    line-height: 33px
+}
+.clip-check.check-lg label:before {
+    height: 30px;
+    width: 30px
+}
+.clip-check.check-lg label:after {
+    font-size: 17px;
+    height: 29px;
+    left: 6px;
+    width: 29px
+}
+.clip-check.check-lg input[type=checkbox]:checked+label:before {
+    border-width: 15px
+}
+.clip-check.check-success input[type=checkbox]:checked+label:before {
+    border-color: rgba(139,202,57,1)
+}
+.clip-check.check-primary input[type=checkbox]:checked+label:before {
+    border-color: #537FE3
+}
+.clip-check.check-warning input[type=checkbox]:checked+label:before {
+    border-color: #ff9725
+}
+.clip-check.check-danger input[type=checkbox]:checked+label:before {
+    border-color: #ff4d4b
+}
+.clip-check.check-info input[type=checkbox]:checked+label:before {
+    border-color: #40c1f3
+}
+.clip-check.check-purple input[type=checkbox]:checked+label:before {
+    border-color: #5A8770
+}
+.clip-radio {
+    padding-left: 0
+}
+.clip-radio label {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    margin-right: 15px;
+    padding-left: 25px!important;
+    position: relative;
+    margin-bottom: 6px;
+    line-height: 23px
+}
+.clip-radio label:after,
+.clip-radio label:before {
+    height: 20px;
+    left: 0;
+    margin-right: 10px;
+    width: 20px;
+    bottom: 2px;
+    transition: all .3s cubic-bezier(.455, .03, .215, 1.33) 0s;
+    display: inline-block;
+    position: absolute;
+    content: ""
+}
+.clip-radio label:before {
+    background-color: #fff;
+    border: 1px solid #d0d0d0;
+    border-radius: 99px
+}
+.clip-radio label:after {
+    border: 1px solid #c8c7cc;
+    border-radius: 99px
+}
+.clip-radio input[type=radio]:focus+label::before {
+    background: #e6e6e6
+}
+.clip-radio input[type=radio]:checked+label:before {
+    border-width: 6px;
+    background: #F8F8F8;
+    border-color: #fff
+}
+.clip-radio input[type=radio]:checked:focus+label::before {
+    border-color: #e6e6e6!important
+}
+.clip-radio input[type=radio][disabled]+label {
+    opacity: .65
+}
+.clip-radio.radio-sm label {
+    padding-left: 20px!important;
+    line-height: 21px
+}
+.clip-radio.radio-sm label:after,
+.clip-radio.radio-sm label:before {
+    top: 3px;
+    height: 15px;
+    width: 15px
+}
+.clip-radio.radio-sm input[type=radio]:checked+label:before {
+    border-width: 5px
+}
+.clip-radio.radio-md label {
+    padding-left: 30px!important;
+    line-height: 29px
+}
+.clip-radio.radio-md label:after,
+.clip-radio.radio-md label:before {
+    height: 25px;
+    width: 25px
+}
+.clip-radio.radio-md input[type=radio]:checked+label:before {
+    border-width: 7px
+}
+.clip-radio.radio-lg label {
+    padding-left: 35px!important;
+    line-height: 33px
+}
+.clip-radio.radio-lg label:after,
+.clip-radio.radio-lg label:before {
+    height: 30px;
+    width: 30px
+}
+.clip-radio.radio-lg input[type=radio]:checked+label:before {
+    border-width: 8px
+}
+.clip-radio.radio-success input[type=radio]:checked+label:before {
+    background: #5cb85c
+}
+.clip-radio.radio-primary input[type=radio]:checked+label:before {
+    background: #58748B
+}
+.clip-radio.radio-info input[type=radio]:checked+label:before {
+    background: #46b8da
+}
+.clip-radio.radio-warning input[type=radio]:checked+label:before {
+    background: #eea236
+}
+.clip-radio.radio-danger input[type=radio]:checked+label:before {
+    background: #d43f3a
+}
+.clip-radio.radio-purple input[type=radio]:checked+label:before {
+    background: #9A89B5
+}
+.clip-check input[type=checkbox]:checked+label:after {
+    color: #fff;
+    content: "\f00c";
+    font-family: FontAwesome;
+}
+
+.clip-check label:after, .clip-check label:before {
+    position: absolute;
+    transition: border .2s linear 0s,color .2s linear 0s;
+    display: inline-block;
+}
+label.quest-checkbox-label{
+    font-size: 12px !important;
+    padding: 0 !important;
+    padding-left: 25px !important;
+}

@@ -1,0 +1,52 @@
+input[type="radio"]{
+         width: 100%;
+         margin-top: 5px;
+         z-index: 10;
+         }
+         textarea{
+         padding: 10px;
+         }
+         ul.file-name li {
+         padding: 10px 5px;
+         list-style-type: none;
+         width: 100%;
+         margin: 0 auto !important;
+         background-color: transparent;
+         color: #fff;
+         margin: 5px;
+         font-size: 12px;
+         }
+         ul.file-name > li > input[type="text"]{
+         width: 100%;
+         margin-bottom: 0;
+         }
+         #idi ul.file-name > li > textarea{
+         width: 50% !important;
+             float: left;
+         }
+          .popUpContainer {
+            width: 40%;
+           
+
+          }
+          .popUpContainer.addHeight{
+            height:70%;
+            overflow: auto;
+            overflow-x: hidden; 
+          }
+          .popUpContainer.addPositiveHeight{
+            /* height:50%; */
+            overflow: auto;
+            overflow-x: hidden; 
+          }
+          
+          .popupOverlay.show{
+            -webkit-transform:scale(1);
+            -moz-transform:scale(1);
+            transform:scale(1);
+          }
+         .add-user-form-ul li textarea{
+          border-color: #ccc;
+          height: 100px;
+          color: #aaa !important;
+         }

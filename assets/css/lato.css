@@ -1,0 +1,60 @@
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../../assets/fonts-new/Lato-Semibold.eot');
+    src: url('../../assets/fonts-new/Lato-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts-new/Lato-Semibold.woff') format('woff'),
+        url('../../assets/fonts-new/Lato-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../../assets/fonts-new/Lato-Thin.eot');
+    src: url('../../assets/fonts-new/Lato-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts-new/Lato-Thin.woff') format('woff'),
+        url('../../assets/fonts-new/Lato-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../../assets/fonts-new/Lato-Regular.eot');
+    src: url('../../assets/fonts-new/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts-new/Lato-Regular.woff') format('woff'),
+        url('../../assets/fonts-new/Lato-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../../assets/fonts-new/Lato-Medium.eot');
+    src: url('../../assets/fonts-new/Lato-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts-new/Lato-Medium.woff') format('woff'),
+        url('../../assets/fonts-new/Lato-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../../assets/fonts-new/Lato-Bold.eot');
+    src: url('../../assets/fonts-new/Lato-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts-new/Lato-Bold.woff') format('woff'),
+        url('../../assets/fonts-new/Lato-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../../assets/fonts-new/Lato-Light.eot');
+    src: url('../../assets/fonts-new/Lato-Light.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts-new/Lato-Light.woff') format('woff'),
+        url('../../assets/fonts-new/Lato-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}

@@ -1,0 +1,249 @@
+.menu {
+  -webkit-filter: url("#shadowed-goo");
+          filter: url("#shadowed-goo");
+}
+
+.menu-item, .menu-open-button {
+  background: #ff4d4b;
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  margin-left: -40px;
+  position: absolute;
+  top: 20px;
+  color: white;
+  text-align: center;
+  line-height: 87px;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform ease-out 200ms;
+  transition: -webkit-transform ease-out 200ms;
+  transition: transform ease-out 200ms;
+  transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+}
+.menu-open-button{
+     line-height: 80px;
+}
+
+.menu-open {
+  display: none;
+}
+
+
+.menu-open:checked + .menu-open-button .hamburger-1 {
+  -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+          transform: translate3d(0, 0, 0) rotate(45deg);
+}
+.menu-open:checked + .menu-open-button .hamburger-2 {
+  -webkit-transform: translate3d(0, 0, 0) scale(0.1, 1);
+          transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+.menu-open:checked + .menu-open-button .hamburger-3 {
+  -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
+          transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+
+.menu {
+  position: absolute;
+  left: 40%;
+    margin-left: -50px;
+    padding-top: 65px;
+    padding-left: 130px;
+  width: 100%;
+  height:980px;
+  box-sizing: border-box;
+  font-size: 20px;
+  text-align: left;
+    top: 50%;
+    margin-top: -60px;
+}
+
+.menu-item:hover {
+  background: white;
+  color: #ff4d4b;
+}
+.menu-item:nth-child(3) {
+  -webkit-transition-duration: 70ms;
+          transition-duration: 70ms;
+}
+.menu-item:nth-child(4) {
+  -webkit-transition-duration: 130ms;
+          transition-duration: 130ms;
+}
+.menu-item:nth-child(5) {
+  -webkit-transition-duration: 190ms;
+          transition-duration: 190ms;
+}
+.menu-item:nth-child(6) {
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+}
+.menu-item:nth-child(7) {
+  -webkit-transition-duration: 310ms;
+          transition-duration: 310ms;
+}
+.menu-item:nth-child(8) {
+  -webkit-transition-duration: 370ms;
+          transition-duration: 370ms;
+}
+.menu-item:nth-child(9) {
+  -webkit-transition-duration: 430ms;
+          transition-duration: 430ms;
+}
+.menu-item:nth-child(10) {
+  -webkit-transition-duration: 490ms;
+          transition-duration: 490ms;
+}
+.menu-item:nth-child(11) {
+  -webkit-transition-duration: 550ms;
+          transition-duration: 550ms;
+}
+.menu-item:nth-child(12) {
+  -webkit-transition-duration: 610ms;
+          transition-duration: 610ms;
+}
+
+.menu-open-button {
+  z-index: 2;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+  -webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+          transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+  cursor: pointer;
+}
+
+.menu-open-button:hover {
+  -webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+          transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+
+.menu-open:checked + .menu-open-button {
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  -webkit-transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+          transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+}
+
+.menu-open:checked ~ .menu-item {
+  -webkit-transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+          transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+}
+.menu-open:checked ~ .menu-item:hover .techListText{
+    display: block;
+}
+
+.menu-open:checked ~ .menu-item:nth-child(3) {
+  -webkit-transition-duration: 160ms;
+          transition-duration: 160ms;
+  -webkit-transform: translate3d(129.35054px, 12.97834px, 0);
+          transform: translate3d(129.35054px, 12.97834px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(4) {
+  -webkit-transition-duration: 240ms;
+          transition-duration: 240ms;
+  -webkit-transform: translate3d(96.58316px, 87.01548px, 0);
+          transform: translate3d(96.58316px, 87.01548px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(5) {
+  -webkit-transition-duration: 320ms;
+          transition-duration: 320ms;
+  -webkit-transform: translate3d(26.35295px, 127.30091px, 0);
+          transform: translate3d(26.35295px, 127.30091px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(6) {
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+  -webkit-transform: translate3d(-54.09909px, 118.20867px, 0);
+          transform: translate3d(-54.09909px, 118.20867px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(7) {
+  -webkit-transition-duration: 480ms;
+          transition-duration: 480ms;
+  -webkit-transform: translate3d(-113.56708px, 63.26545px, 0);
+          transform: translate3d(-113.56708px, 63.26545px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(8) {
+  -webkit-transition-duration: 560ms;
+          transition-duration: 560ms;
+  -webkit-transform: translate3d(-128.9845px, -16.21726px, 0);
+          transform: translate3d(-128.9845px, -16.21726px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(9) {
+  -webkit-transition-duration: 640ms;
+          transition-duration: 640ms;
+  -webkit-transform: translate3d(-94.3712px, -89.4096px, 0);
+          transform: translate3d(-94.3712px, -89.4096px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(10) {
+  -webkit-transition-duration: 720ms;
+          transition-duration: 720ms;
+  -webkit-transform: translate3d(-23.15305px, -127.9216px, 0);
+          transform: translate3d(-23.15305px, -127.9216px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(11) {
+  -webkit-transition-duration: 800ms;
+          transition-duration: 800ms;
+  -webkit-transform: translate3d(57.04574px, -116.81517px, 0);
+          transform: translate3d(57.04574px, -116.81517px, 0);
+}
+.menu-open:checked ~ .menu-item:nth-child(12) {
+  -webkit-transition-duration: 880ms;
+          transition-duration: 880ms;
+  -webkit-transform: translate3d(115.11754px, -60.39828px, 0);
+          transform: translate3d(115.11754px, -60.39828px, 0);
+}
+.webText{
+    top: 35px;
+    right: -110px;
+}
+.mobText{
+    top: 50px;
+    right: -121px;
+}
+.thickText{
+    top: 95px;
+    right: -15px;
+}
+.networkText{
+    top: 80px;
+    right: 71px;
+}
+.serverText{
+    top: 47px;
+    right: 96px;
+}
+.endText{
+    top: 28px;
+    right: 90px;
+}
+.cloudText{
+    top: 17px;
+    right: 93px;
+}
+.dataText{
+        top: -30px;
+    right: 18px;
+}
+.iotText{
+    top: 3px;
+    right: -24px;
+}
+.scadaText{
+    top: 20px;
+    right: -46px;
+}
+.techListText{
+    position: absolute;
+    line-height: normal;
+    font-size: 13px;
+    font-family: 'Lato';
+    color: #4d4d4d;
+    display: none;
+    padding: 10px;
+    color: #4d4d4d;
+    margin-right: -10px;
+}

@@ -1,0 +1,55 @@
+.form-container{
+    border: none;
+  }
+  .jira-container{
+    width:50%;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    height:400px;
+    background-color:#f1f1f1;
+    box-shadow:3px 3px 4px #4d4d4d;
+}
+
+.jira-form-container{
+  width:100%;
+  padding:0px 0px;
+  height:100%;
+}
+.jira-form-left{
+  border-right:1px solid #ccc;
+  width:40%;
+  float:left;
+  padding:15px 10px;
+  height:100%;
+  text-align: center
+}
+.jira-form-left img{
+  width:70%;
+  margin:0 auto;
+}
+
+.form-fields{
+  border:none;
+  border-bottom:1px solid #fff;
+  background-color:rgba(255,255,255,0.2);
+  margin-bottom:15px;
+  color:#fff !important;
+}
+::-webkit-input-placeholder { /* Chrome */
+  color: #fff;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #fff;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #fff;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: #fff;
+  opacity: 1;
+}
