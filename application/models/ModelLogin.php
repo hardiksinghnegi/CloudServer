@@ -37,4 +37,17 @@ class ModelLogin extends CI_Model
 		return 	$queryRes;
 	}
 
+	public function startOnboarding(){
+
+		$queryRes = $this->db->query("select uid from userLogin ");
+		$queryRes = $queryRes->result_array();
+		
+		if (count($queryRes)==0){
+			return True;
+		}
+
+		return False;
+
+	}
+
 }

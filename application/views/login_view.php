@@ -1,44 +1,50 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="<?php echo base_url('/imgs/icons/servTitle.png')?>" type="image/png">
     <title>SecuraStore</title>
-    <?= link_tag('assets/css/bootstrap.css') ?>
-    <?= link_tag('assets/css/font-awesome.min.css') ?>
-    <?= link_tag('assets/css/animate.css') ?>
-    <?= link_tag('assets/css/login.css') ?> 
+    <?= link_tag('assets/css/bootstrap.css')?>
+    <?= link_tag('assets/css/font-awesome.min.css')?>
+    <?= link_tag('assets/css/background.css')?>
+
+
+    <script src="<?= base_url('assets/js/bootstrap.js') ?>"></script>
+
+
 </head>
 
-<body class="body-bg">
-    <div class="container-fluid">
+<body >
 
-                <?php echo form_open(base_url().'home/loadHome',array('id' => 'frmLogin')); ?>
-                <div class="col-xs-12 form-container">
-                    <div class="form-group email-container">
-                        <span class="email-border"></span>
-                        <input type="text" class="form-control" name="txtUserName" id="inputEmail" placeholder="Email" autocomplete="off" tabindex="1">
-                       
-                    </div>
-                    <div class="form-group pwd-container">
-                        <span class="pwd-border"></span>
-                        <input type="password" class="form-control"  name="txtPassword" id="inputPwd" placeholder="Password" autocomplete="off" tabindex="2">
-                        <input type="Submit" id="submitBtn" name="" class="btn btn-primary btn-wide pull-right" value="Login" >
-                        <input type="hidden" name="hashPwd" id="hashPwd">
-                         <input type="hidden" name="isSubmit" value="1">
-                        <span class="pull-left" id="forgotPwd"><a class="forgot-pass" href="<?php echo base_url().'/main/forgotPassword';?>">Forgot Password?</a></span>
-                    </div>
-
-                </div>
-                <?php echo form_close();?>
-    </div>
+        <div class="container-fluid ">
         
+            <div class=" col-md-4 offset-md-4">
+               
+                <img class="img-responsive logo wow fadeInLeft" data-wow-delay="0.2s" src="<?php echo base_url('/imgs/icons/servTitle.png')?>"  align="left">
+                <h1 align="left">SecuraStore</h1></img>
+              
+                <?php echo form_open(base_url().'home/loadHome',array('id' => 'frmLogin')); ?>
+
+                <input type="text" class="form-control" name="txtUserName" id="inputEmail" placeholder="Email" autocomplete="off" style="height:50px" >
+                
+                <input type="password" class="form-control" name="txtPassword" id="inputPwd" placeholder="Password" autocomplete="off" style="height:50px">
+
+                <input type="hidden" id="configField" name="isSubmit" value="1">
+
+                <input type="Submit" id="submitBtn" name="" class="btn btn-primary btn-wide form-control form-button" value="SIGN IN" style="height:40px" >
+                <?php echo form_close();?>   
+
+                <?php echo form_open(base_url().'home/forgotPassword',array('id' => 'frmForgot')); ?>
+                <input type="Submit" id="forgotPwd" name="" class="btn btn-primary btn-wide form-control form-button" value="FORGOT PASSWORD" style="height:40px">
+                <input type="hidden" name="forgotPass" width="10000" id="forgotField"  value="1">
+                <?php echo form_close();?>  
+            </div> 
+        </div>
    
 </body>
-
-
-
 
 </html>

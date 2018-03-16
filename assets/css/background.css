@@ -1,0 +1,120 @@
+@import url("lato.css");
+
+body {
+    background-color: #74F9F5;
+}
+
+h1{
+	
+	font-family: 'Lato';
+	color: #738276;
+	font-weight: 500;
+}
+
+h2{
+	
+	font-family: 'Lato';
+	color: #738276;
+	font-weight: 500;
+}
+
+.img-div{
+	margin-bottom: 20px;
+}
+
+html, body, .container-table {
+    height: 100%;
+}
+
+body > .container-fluid{
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+
+
+input { margin-bottom: 10px; }
+
+::-webkit-input-placeholder {
+ font-size: 20px;
+ color: #c4d4e0;
+ text-transform: uppercase;
+ text-transform: uppercase;
+ text-align: center;
+ font-family: "Lato";
+ font-weight: 500;
+ 
+}
+:-moz-placeholder { /* older Firefox*/
+ font-size:20px;
+ color: #c4d4e0;
+ text-transform: uppercase;
+ text-align: center;
+ font-family: "Lato";
+ font-weight: 500;
+
+}
+::-moz-placeholder { /* Firefox 19+ */ 
+ font-size: 20px;
+ color: #c4d4e0; 
+ text-transform: uppercase;
+ text-align: center;
+ font-family: "Lato";
+ font-weight: 500;
+ 
+} 
+:-ms-input-placeholder { 
+ font-size: 20px; 
+ color: #c4d4e0;
+ text-transform: uppercase;
+ text-align: center;
+ font-family: "Lato";
+ font-weight: 500;
+ 
+}
+
+.logo{
+	width: 100px;
+	/*margin-left: 100px;*/
+	margin-bottom: 40px;
+	visibility: visible;
+	text-align: center;	
+	
+}
+
+.form-button{
+	margin-bottom: 5px;
+	background-color:#2bdbd5;
+	font-size : 20px;
+	font-family: "Lato";
+}
+
+.top-logo{
+
+	width:70px;
+	/*float: left;*/
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+
+	
+}
+
+
+.panel-form {
+  display: flex; /* 2. display flex to the rescue */
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.panel-input{
+	margin-left:5px;
+}
+
+.panel-button{
+	margin-bottom:15px;
+	font-family: "Lato";
+	font-size : 20px;
+}
