@@ -111,8 +111,11 @@ input { margin-bottom: 10px; }
 }
 
 .panel-button{
-	margin-bottom:18px;
+	margin-bottom:10px;
 	font-family: "Lato";
 	font-size : 20px;
 }
 
+select.error, textarea.error, input.error ,label.error{
+    color:#FF0000;
+}
