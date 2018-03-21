@@ -11,6 +11,12 @@ h1{
 	font-weight: 500;
 }
 
+p{
+	color:#FF0000;
+	font-family: 'Lato';
+	font-size: 15px;
+}
+
 h3{
 	
 	font-family: 'Lato';
@@ -118,4 +124,9 @@ input { margin-bottom: 10px; }
 
 select.error, textarea.error, input.error ,label.error{
     color:#FF0000;
+    border-color: red;
+}
+
+.error{
+	
 }

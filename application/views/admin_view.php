@@ -27,22 +27,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="panel panel-primary">
 				<div class="panel-heading"><h3>Admin User Setup</h3></div>
 				<div class="panel-body">
+
 					<?php echo form_open(base_url().'home/onboarding',array('id' => 'companyDetail')); ?>
 					<div class="panel-form">
 							
-						<label id="inputfirst-error" class="col-md-4 validate" for="inputFirst"></label>
-						<label id="inputmiddle-error" class="col-md-4"></label>
+						<label id="inputfirst-error" class="col-md-4" for="inputFirst"></label>
+						<label id="inputmiddle-error" class="col-md-4" for="inputMiddle"></label>
 						<label id="inputlast-error" class="col-md-4" for="inputLast"></label>
 
 					</div>
 
 					<div class="panel-form">
 							
-							<input type="text" class="form-control panel-input" name="firstName" id="inputFirst" placeholder="First Name" style="height:50px" maxlength="20">
+							<input type="text" class="form-control panel-input" name="firstName" id="inputFirst" placeholder="First Name" style="height:50px" maxlength="31" value="<?php echo set_value('firstName');?>">
 
-							<input type="text" class="form-control panel-input" name="middleName" id="inputMiddle" placeholder="Middle Name" autocomplete="on" style="height:50px" maxlength="20">
+							<input type="text" class="form-control panel-input" name="middleName" id="inputMiddle" placeholder="Middle Name" autocomplete="on" style="height:50px" maxlength="31" value="<?php echo set_value('middleName');?>">
 
-							<input type="text" class="form-control panel-input" name="lastName" id="inputLast" placeholder="Last Name" autocomplete="on" style="height:50px" maxlength="20">
+							<input type="text" class="form-control panel-input" name="lastName" id="inputLast" placeholder="Last Name" autocomplete="on" style="height:50px" maxlength="31" value="<?php echo set_value('lastName');?>">
 			
 
 					</div>
@@ -82,15 +83,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 					<div class="panel-form">
 							
-						<label id="inputcompany-error" class="col-md-6" for="inputPwd"></label>
+						<label id="inputcompany-error" class="col-md-6" for="inputCompany"></label>
 					
 						<label id="inputurl-error" class="col-md-6" for="inputUrl"></label>
 
 					</div>
 
 					<div class="panel-form">
-						 <input type="text" class="form-control panel-input" name="txtCompany" id="inputCompany" placeholder="Company Name" autocomplete="on" style="height:50px">
-						 <input type="url" class="form-control panel-input" name="txtUrl" id="inputUrl" placeholder="Company URL" autocomplete="on" style="height:50px">
+						 <input type="text" class="form-control panel-input" name="txtCompany" id="inputCompany" placeholder="Company Name" autocomplete="on" style="height:50px" value="<?php echo set_value('inputCompany');?>">
+						 <input type="url" class="form-control panel-input" name="txtUrl" id="inputUrl" placeholder="Company URL" autocomplete="on" style="height:50px" value="<?php echo set_value('inputUrl');?>">
 					
 					</div>
 
@@ -103,9 +104,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 
 					<div class="panel-form">
-						 <input type="text" class="form-control panel-input" name="txtCity" id="inputCity" placeholder="City" autocomplete="on" style="height:50px">
-						  <input type="text" class="form-control panel-input" name="txtState" id="inputState" placeholder="State" autocomplete="on" style="height:50px" >
-						 <input type="text" class="form-control panel-input" name="txtCountry" id="inputCountry" placeholder="Country" autocomplete="on" style="height:50px" >
+						 <input type="text" class="form-control panel-input" name="txtCity" id="inputCity" placeholder="Company City" autocomplete="on" style="height:50px" value="<?php echo set_value('inputCity');?>">
+						  <input type="text" class="form-control panel-input" name="txtState" id="inputState" placeholder="Company State" autocomplete="on" style="height:50px" value="<?php echo set_value('inputState');?>">
+						 <input type="text" class="form-control panel-input" name="txtCountry" id="inputCountry" placeholder="Company Country" autocomplete="on" style="height:50px" value="<?php echo set_value('inputCountry');?>">
 					</div>
 
 						<input type="hidden" id="onboardConfig" name="hideOnboard" value="1">
@@ -115,9 +116,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<input type="Submit" id="submitBtn" name="" class="btn btn-primary btn-wide form-control panel-button panel-input" style="height:50px" value="Submit" >
 					</div>
 					<?php echo form_close();?>
-					
+					<div id="php-error" class="error">
+						<p><?php echo validation_errors(); ?></p>
+					</div>
+
 				</div>
 			</div>
+			
 		</div>
 
 	</div>
@@ -127,12 +132,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script type="text/javascript">
 	
   $(document).ready(function(){
+
+  	jQuery.validator.addMethod("namerule", function(value, element) {
+  		return this.optional(element) || /^[a-zA-Z_]*$/i.test(value);
+	}, "Please use alphabets only");
+
+
+
     $("#companyDetail").validate({
     		 errorPlacement: function(error, element) {
     		 	// errorElement: 'label',
      			// error.insertBefore($(element).parent('div'));
      			if(element.attr("name")=="firstName")
      				error.appendTo('#inputfirst-error');
+     			else if(element.attr("name")=="middleName")
+     				error.appendTo('#inputmiddle-error');
      			else if(element.attr("name")=="lastName")
      				error.appendTo('#inputlast-error');
      			else if(element.attr("name")=="txtEmail")
@@ -165,11 +179,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           },
           rules:{
             firstName:{
-              required:true
+              required:true,
+              namerule:true
               
             },
+            middleName:{
+            	namerule:true
+            },
             lastName:{
-              required:true
+              required:true,
+              namerule:true
             },
             txtEmail:{
               required:true,
@@ -198,7 +217,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             	required:true
             },
             txtCountry:{
-            	required:true
+            	required:true,
+            	namerule:true
             },
             txtUrl:{
               required:true,
@@ -229,6 +249,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         });
 
   });
+
+ $('html, body').animate({
+    scrollTop: $("#php-error").offset().top
+}, 1000);
 
 </script>
 

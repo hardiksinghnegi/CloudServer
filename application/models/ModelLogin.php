@@ -6,7 +6,7 @@ class ModelLogin extends CI_Model
 
 	public function verifyEmail($emailId){
 
-		$queryRes = $this->db->query("select uid from userLogin where emailid=".$this->db->escape($emailId)."");
+		$queryRes = $this->db->query("select uid from user_login where email_id=".$this->db->escape($emailId)."");
 		$queryRes = $queryRes->row_array();
 
 		if(count($queryRes)==1){
@@ -16,30 +16,23 @@ class ModelLogin extends CI_Model
 		return False;
 	}
 
-	public function getSalt($emailId){
+	public function getHash($emailId){
 
-		$queryRes = $this->db->query("select pwdsalt from userLogin where emailid=".$this->db->escape($emailId)."");
+		$queryRes = $this->db->query("select passwd_hash from user_login where email_id=".$this->db->escape($emailId)."");
 		$queryRes = $queryRes->row_array();
-		return 	$queryRes['pwdsalt'];
-	}
-
-	public function getPassword($emailId){
-
-		$queryRes = $this->db->query("select passwd from userLogin where emailid=".$this->db->escape($emailId)."");
-		$queryRes = $queryRes->row_array();
-		return 	$queryRes['passwd'];
+		return 	$queryRes['passwd_hash'];
 	}
 
 	public function getUserInfo($emailId){
 
-		$queryRes = $this->db->query("select * from userLogin where emailid=".$this->db->escape($emailId)."");
+		$queryRes = $this->db->query("select * from user_login where email_id=".$this->db->escape($emailId)."");
 		$queryRes = $queryRes->result_array();
 		return 	$queryRes;
 	}
 
 	public function startOnboarding(){
 
-		$queryRes = $this->db->query("select uid from userLogin ");
+		$queryRes = $this->db->query("select uid from user_login ");
 		$queryRes = $queryRes->result_array();
 		
 		if (count($queryRes)==0){
@@ -48,6 +41,29 @@ class ModelLogin extends CI_Model
 
 		return False;
 
+	}
+
+	public function createUser($fname,$mname,$lname,$company,$city,$state,$country,$email,$empId,$url,$password,$priviledge){
+
+		$ul_array = array(
+			'email_id' => $email,
+			'passwd_hash' => $password,
+			'usr_lvl' => $priviledge);
+
+		$ud_array = array('emp_id' => $empId,
+						  'f_name' => $fname,
+						  'm_name' => $mname,
+						  'l_name' => $lname,
+						  'company' => $company,
+						  'c_url' => $url,
+						  'c_city' => $city,
+						  'c_state' => $state,
+						  'c_country' => $country
+
+						);
+
+		$this->db->insert('user_login',$ul_array);
+		$this->db->insert('user_detail',$ud_array);
 	}
 
 }

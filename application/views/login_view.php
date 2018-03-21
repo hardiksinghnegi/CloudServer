@@ -22,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class="container-fluid ">
         
-            <div class=" col-md-4 offset-md-4">
+            <div class=" col-md-4 col-md-offset-4">
                
                 <img class="img-responsive logo wow fadeInLeft" data-wow-delay="0.2s" src="<?php echo base_url('/imgs/icons/servTitle.png')?>"  align="left">
                 <h1 align="left">SecuraStore</h1></img>
