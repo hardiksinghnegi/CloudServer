@@ -1,6 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/*This controller which manages signin and signup activities for the admin user.*/
+
+
 class Home extends CI_Controller {
 
 	function __construct(){
@@ -9,12 +12,12 @@ class Home extends CI_Controller {
 
 	}
 
-	
-
 
 	public function index(){
 		$this->load->model('modelLogin');
 		$bool = $this->modelLogin->startOnboarding();
+
+		//Check whether to initiate onborading procedure or not
 
 		if($bool){
 			$this->loadOnboarding();
@@ -30,6 +33,8 @@ class Home extends CI_Controller {
 		$this->load->model('modelLogin');
 		$boolVal = $this->modelLogin->startOnboarding();
 		if($boolVal){
+
+			//Begin Onboarding Process
 			$this->load->view('admin_view');
 		}
 		else{
@@ -51,11 +56,11 @@ class Home extends CI_Controller {
 		}
 		else{
 			if($this->session->userdata('is_logged_in')){
-					redirect('home/testVal');
+					redirect('adminDashboard');
 			}
 		
 			else{
-
+					//Load the Login Page
 					$this->load->view("login_view");
 					$this->isSubmit = $this->input->post('isSubmit');
 		
@@ -68,9 +73,12 @@ class Home extends CI_Controller {
 							$userPasswd = $this->input->post('txtPassword');
 							$dbHash = $this->modelLogin->getHash($this->input->post('txtUserName'));
 							
+							//Verify password hash
 
 							if(password_verify($userPasswd,$dbHash)){
 								$userInfo = $this->modelLogin->getUserInfo($this->input->post('txtUserName'));
+
+								//Create user Session
 								$userSession = array('emailId' => $userInfo['email_id'],
 													  'userId' => $userInfo['uid'],
 													  'privilege' => $userInfo['usr_lvl'],
@@ -78,7 +86,7 @@ class Home extends CI_Controller {
 
 												 );
 								$this->session->set_userdata($userSession);
-								redirect('home/testVal');
+								redirect('adminDashboard');
 							}
 						}
 					
@@ -89,15 +97,14 @@ class Home extends CI_Controller {
 	}
 
 	public function testVal(){
-		if($this->session->userdata('is_logged_in')){
-			$this->load->view('dashboard_view');
-		}
-		else{
-			redirect('home/loadHome');
-		}
+		
+			$this->load->view('storage_setup');
+
 	}
 
 	public function logout(){
+
+		//Destroy user session to delete user
 		if($this->session->userdata('is_logged_in')){
 			$exitArray  = array('emailId' =>'' ,
 								'userId' =>'',
@@ -109,7 +116,7 @@ class Home extends CI_Controller {
 			$this->session->sess_destroy();
 			$this->load->helper('cookie');
 			delete_cookie("csrf_cookie");
-			redirect('home/loadHome');
+			redirect('home');
 		}
 	}
 
@@ -151,16 +158,16 @@ class Home extends CI_Controller {
 				$this->load->view('success_view');
 				$this->load->model('modelLogin');
 
-				$fname = $this->input->post('firstName');
-				$mname = $this->input->post('middleName');
-				$lname = $this->input->post('lastName');
-				$company = $this->input->post('txtCompany');
-				$city = $this->input->post('txtCity');
-				$state = $this->input->post('txtState');
-				$country = $this->input->post('txtCountry');
-				$email = $this->input->post('txtEmail');
-				$empId = $this->input->post('txtId');
-				$url = $this->input->post('txtUrl');
+				$fname = $this->input->post('firstName',true);
+				$mname = $this->input->post('middleName',true);
+				$lname = $this->input->post('lastName',true);
+				$company = $this->input->post('txtCompany',true);
+				$city = $this->input->post('txtCity',true);
+				$state = $this->input->post('txtState',true);
+				$country = $this->input->post('txtCountry',true);
+				$email = $this->input->post('txtEmail',true);
+				$empId = $this->input->post('txtId',true);
+				$url = $this->input->post('txtUrl',true);
 				$password = $this->input->post('txtPassword');
 				$password = password_hash($password, PASSWORD_BCRYPT);
 				$privilege = '0';
