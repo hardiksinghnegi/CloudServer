@@ -22,5 +22,16 @@ class ModelDashboard extends CI_Model
 		$this->db->query("UPDATE setup_config SET storage_count = 1, total_capacity =".$this->db->escape($storageSpace).", free_capacity=".$this->db->escape($storageSpace)."");
 	}
 
+	public function getMaxSpace(){
+		$maxSpace = $this->db->query("Select free_capacity from setup_config");
+		$maxSpace = $maxSpace->row_array();
 
+		return $maxSpace['free_capacity'];
+	}
+
+	public function updateMgmtStorage($inputSpace,$inputPerm,$inputOpt){
+
+		$this->db->query('UPDATE setup_config SET user_capacity='.$this->db->escape($inputSpace).', sec_perm='.$this->db->escape($inputPerm).', enforce_https='.$this->db->escape($inputOpt).'');
+
+	}
 }

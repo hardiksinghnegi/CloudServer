@@ -26,6 +26,9 @@ class AdminDashboard extends CI_Controller {
 			{
 				$this->load->view('mgmt_view');
 			}
+			else{
+				$this->load->view('dashboard_view');
+			}
 
 		}
 		else{
@@ -146,10 +149,95 @@ class AdminDashboard extends CI_Controller {
 
 		if ($returnVal=='True')
 			return True;
-		else
+		else{
 			$this->form_validation->set_message('verifyConnect','Unable to connect using given credentials');
 			return False;
+		}
 
+	}
+
+	public function mgmtDashboard(){
+		if($this->input->post('hideUser')=='1' && $this->session->userdata('is_logged_in')){
+		// print_r($_POST);die;
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('userSpace',"Default Space",'required|callback_validSpace|greater_than[0]');
+		$this->form_validation->set_rules('userPerm',"Default Permission",'callback_valid_permission');
+		$this->form_validation->set_rules('opt',"HTTPS Policy",'callback_valid_opt');
+
+			if($this->form_validation->run()){
+
+				$inputSpace = $this->input->post('userSpace');
+				$inputPerm = $this->input->post('userPerm');
+				$inputOpt = $this->input->post('opt');
+
+				if(strlen($inputPerm)==0){
+					$inputPerm = '400';
+				}
+
+				if($inputOpt=='Yes'){
+					$inputOpt = '1';
+				}
+				else{
+					$inputOpt = '0';
+				}
+
+				$this->load->model('modelDashboard');
+				$this->modelDashboard->updateSetupStatus('3');
+				$this->modelDashboard->updateMgmtStorage($inputSpace,$inputPerm,$inputOpt);
+
+				$this->load->view('dashboard_view');
+			}
+			else{
+				$this->load->view('mgmt_view');
+			}
+		}
+		else{
+			redirect('adminDashboard');
+		}
+	}
+
+	public function validSpace(){
+		$inputSpace = $this->input->post('userSpace');
+		if(strlen($inputSpace)>0){
+			$this->load->model('modelDashboard');
+			$maxSpace = $this->modelDashboard->getMaxSpace();
+			if ($maxSpace <= $inputSpace){
+				$this->form_validation->set_message('validSpace','Not enough space available');
+				return false;
+			} 
+		}
+		return true;
+	}
+
+	public function valid_permission(){
+		$inputPerm = $this->input->post('userPerm',true);
+		$perm_array = array('400','440','444','600','640','644','660','664','666','700','740','744','760','764','766','770','774','776','777' );
+		if(strlen($inputPerm)>0){
+			foreach ($perm_array as $value) {
+				if($value==$inputPerm){
+					return True;
+				}
+			}
+			
+			$this->form_validation->set_message('valid_permission','Incorrect Permission');
+			return false;
+		
+		}
+		
+		
+		return true;
+	}
+
+	public function valid_opt(){
+		$inputOpt = $this->input->post('opt');
+
+		if(($inputOpt=="Yes") || ($inputOpt=="No")){
+			
+			return true;
+		}
+		else
+			$this->form_validation->set_message('valid_opt','Incorrect choice of HTTPS mode');
+			return false;
 	}
 
 }
