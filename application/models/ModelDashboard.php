@@ -32,6 +32,12 @@ class ModelDashboard extends CI_Model
 	public function updateMgmtStorage($inputSpace,$inputPerm,$inputOpt){
 
 		$this->db->query('UPDATE setup_config SET user_capacity='.$this->db->escape($inputSpace).', sec_perm='.$this->db->escape($inputPerm).', enforce_https='.$this->db->escape($inputOpt).'');
+	}
 
+	public function getFileInfo($uid){
+
+		$queryRes = $this->db->query("SELECT file_name,size,chksum,created_at from file_info where uid =".$this->db->escape($uid)." and del_flag ='0'");
+
+		return $queryRes->result_array();
 	}
 }

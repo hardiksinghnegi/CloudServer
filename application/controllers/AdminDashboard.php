@@ -12,7 +12,7 @@ class AdminDashboard extends CI_Controller {
 	}
 
 	public function index(){
-		if($this->session->userdata('is_logged_in')){
+		if($this->session->userdata('is_logged_in') && ($this->session->userdata('privilege')=='0')){
 			$this->load->model('modelDashboard');
 			if($this->modelDashboard->getSetupStatus()=='0'){
 
@@ -27,7 +27,14 @@ class AdminDashboard extends CI_Controller {
 				$this->load->view('mgmt_view');
 			}
 			else{
-				$this->load->view('dashboard_view');
+
+				$userId = $this->session->userdata('userId');
+				$this->load->model('modelLogin');
+				
+				$userArray = $this->modelLogin->getUserDetail($userId);
+
+				$dash_array =  array('userName' => $userArray['f_name']);
+				$this->load->view('dashboard_view',$dash_array);
 			}
 
 		}
@@ -39,7 +46,7 @@ class AdminDashboard extends CI_Controller {
 
 
 	public function storageSetup(){
-		if($this->input->post("isAdmin")=='1' && $this->session->userdata('is_logged_in')){
+		if($this->input->post("isAdmin")=='1' && $this->session->userdata('is_logged_in') && ($this->session->userdata('privilege')=='0')){
 			$this->load->model('modelDashboard');
 			$this->modelDashboard->updateSetupStatus('1');
 
@@ -49,7 +56,7 @@ class AdminDashboard extends CI_Controller {
 	}
 
 	public function mgmtSetup(){
-		if($this->input->post('hideStorage')=='1' && $this->session->userdata('is_logged_in')){
+		if($this->input->post('hideStorage')=='1' && $this->session->userdata('is_logged_in') && ($this->session->userdata('privilege')=='0')){
 
 			$this->load->library('form_validation');
 			$this->form_validation->set_rules("assetTag","Asset Tag","required|is_unique[storage_detail.s_tag]");
@@ -157,7 +164,7 @@ class AdminDashboard extends CI_Controller {
 	}
 
 	public function mgmtDashboard(){
-		if($this->input->post('hideUser')=='1' && $this->session->userdata('is_logged_in')){
+		if($this->input->post('hideUser')=='1' && $this->session->userdata('is_logged_in') && ($this->session->userdata('privilege')=='0')){
 		// print_r($_POST);die;
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('userSpace',"Default Space",'required|callback_validSpace|greater_than[0]');
@@ -185,7 +192,11 @@ class AdminDashboard extends CI_Controller {
 				$this->modelDashboard->updateSetupStatus('3');
 				$this->modelDashboard->updateMgmtStorage($inputSpace,$inputPerm,$inputOpt);
 
-				$this->load->view('dashboard_view');
+				$userId = $this->session->userdata('privilege');
+
+				$dash_array =  array('userPrivilege' => $userId );
+
+				$this->load->view('dashboard_view',$dash_array);
 			}
 			else{
 				$this->load->view('mgmt_view');

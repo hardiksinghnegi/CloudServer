@@ -78,6 +78,8 @@ class Home extends CI_Controller {
 							if(password_verify($userPasswd,$dbHash)){
 								$userInfo = $this->modelLogin->getUserInfo($this->input->post('txtUserName'));
 
+								// print_r($userInfo);
+
 								//Create user Session
 								$userSession = array('emailId' => $userInfo['email_id'],
 													  'userId' => $userInfo['uid'],
@@ -85,6 +87,7 @@ class Home extends CI_Controller {
 													  'is_logged_in' => true
 
 												 );
+								// print_r($userSession);die;
 								$this->session->set_userdata($userSession);
 								redirect('adminDashboard');
 							}
@@ -96,11 +99,36 @@ class Home extends CI_Controller {
 		}
 	}
 
-	public function testVal(){
+	// public function testVal(){
 		
-			$this->load->view('storage_setup');
+	// 		$this->load->helper('download');
+	// 		force_download('/home/lucideus/Pictures/Screenshot.png',NULL);
 
-	}
+	// }
+
+	// public function testVal(){
+
+	// 	// print_r($_POST);
+	// 	// echo $this->input->post('file');
+	// 	// echo $_FILES['file']['name'];
+	// 	$config['upload_path'] = '/var/www/html/SecuraServer/uploads';
+	// 	$config['file_name'] = time();
+	// 	$config['allowed_types'] = '*';
+
+
+
+	// 	$this->load->library('upload', $config);
+
+	// 	if (!$this->upload->do_upload('file')){
+ //            $error = array('error' => $this->upload->display_errors());
+ //            print_r($error);
+
+ //        }
+ //        else{
+ //                $data = array('upload_data' => $this->upload->data());
+ //                print_r($data);
+ //        }
+	// }
 
 	public function logout(){
 

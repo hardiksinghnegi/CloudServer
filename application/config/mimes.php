@@ -15,6 +15,7 @@ return array(
 	'csv'	=>	array('text/x-comma-separated-values', 'text/comma-separated-values', 'application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'text/plain'),
 	'bin'	=>	array('application/macbinary', 'application/mac-binary', 'application/octet-stream', 'application/x-binary', 'application/x-macbinary'),
 	'dms'	=>	'application/octet-stream',
+	'enc'	=>	'application/octet-stream',
 	'lha'	=>	'application/octet-stream',
 	'lzh'	=>	'application/octet-stream',
 	'exe'	=>	array('application/octet-stream', 'application/x-msdownload'),

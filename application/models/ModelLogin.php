@@ -26,7 +26,7 @@ class ModelLogin extends CI_Model
 	public function getUserInfo($emailId){
 
 		$queryRes = $this->db->query("select * from user_login where email_id=".$this->db->escape($emailId)."");
-		$queryRes = $queryRes->result_array();
+		$queryRes = $queryRes->row_array();
 		return 	$queryRes;
 	}
 
@@ -64,6 +64,12 @@ class ModelLogin extends CI_Model
 
 		$this->db->insert('user_login',$ul_array);
 		$this->db->insert('user_detail',$ud_array);
+	}
+
+	public function getUserDetail($userId){
+		$queryRes = $this->db->query("select * from user_detail where uid=".$this->db->escape($userId)."");
+		$queryRes = $queryRes->row_array();
+		return 	$queryRes;
 	}
 
 }
