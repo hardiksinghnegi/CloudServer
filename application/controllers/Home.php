@@ -99,36 +99,57 @@ class Home extends CI_Controller {
 		}
 	}
 
-	// public function testVal(){
-		
-	// 		$this->load->helper('download');
-	// 		force_download('/home/lucideus/Pictures/Screenshot.png',NULL);
 
-	// }
+	function cmpSpace($elem1,$elem2){
+		$sp1 = $elem1['s_free_space'];
+		$sp2 = $elem2['s_free_space'];
+		if($sp1==$sp2){
+			return 0;
+		}
 
-	// public function testVal(){
+		return ($sp1 < $sp2) ? -1:1;
+	}
 
-	// 	// print_r($_POST);
-	// 	// echo $this->input->post('file');
-	// 	// echo $_FILES['file']['name'];
-	// 	$config['upload_path'] = '/var/www/html/SecuraServer/uploads';
-	// 	$config['file_name'] = time();
-	// 	$config['allowed_types'] = '*';
+  //  public function testSFTP(){
 
+     //    $this->load->model("modelDashboard");
+     //    $storageInfo = $this->modelDashboard->getStorageData();
 
+     //    uasort($storageInfo,array($this,'cmpSpace'));
 
-	// 	$this->load->library('upload', $config);
+     //    $sftpInfo =  end($storageInfo);
+     //    $upPath = "/var/www/html/SecuraServer/uploads/uid_1_test_finale_2018-04-17_09-28-41.png";
+     //    $sid = $sftpInfo['s_id'];
+     //    $sIp = $sftpInfo['s_ip'];
+     //    $sUser = $sftpInfo['s_uname'];
+     //    $sPass = $sftpInfo['s_passwd'];
+     //    $sKey = $sftpInfo['s_keypath'];
+     //    $sPort = $sftpInfo['s_port'];
+     //    $sFreeSpace = $sftpInfo['s_free_space'];
 
-	// 	if (!$this->upload->do_upload('file')){
- //            $error = array('error' => $this->upload->display_errors());
- //            print_r($error);
+     //    $sAuth = '';
+     //    $sType = '';
 
- //        }
- //        else{
- //                $data = array('upload_data' => $this->upload->data());
- //                print_r($data);
- //        }
-	// }
+     //    if(strlen($sPass)==0){
+
+    	// 	$sAuth = $sKey;
+    	// 	$sType = 2;
+     //    }
+     //    else{
+     //    	$sAuth = $sPass;
+     //    	$sType = 1;
+     //    }
+
+     //    $sftpStatus  = exec("python /var/www/html/SecuraServer/pythonEngine/sftpTransfer.py 1 ".$sIp." ".$sUser." ".$sAuth." ".$sType." ".$sPort." ".$upPath." 2>&1");
+    	
+    	// if ($sftpStatus=="Uploaded"){
+    	// 	$newFreeSpace = 
+    	// }
+    	// else{
+    	// 	return -1;
+    	// }
+     //    // return 1;
+  //  }
 
 	public function logout(){
 
